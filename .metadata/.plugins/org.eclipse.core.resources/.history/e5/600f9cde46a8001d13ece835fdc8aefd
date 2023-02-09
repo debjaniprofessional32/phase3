@@ -1,0 +1,17 @@
+spring.h2.console.enabled=true
+spring.datasource.url=jdbc:h2:file:./db
+spring.datasource.driverClassName=org.h2.Driver
+spring.datasource.username=sa
+spring.datasource.password=
+spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+spring.jpa.hibernate.ddl-auto=update
+server.port=8080
+
+spring.security.oauth2.client.registration.google.client-id=443409613966-hu1iiubgjij48cgeu8ul3g9vskf0getp.apps.googleusercontent.com
+spring.security.oauth2.client.registration.google.client-secret=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
+spring.security.oauth2.client.registration.google.scope=profile, email
+
+
+# ThymeLeaf settings
+spring.devtools.livereload.enabled=false
+ 

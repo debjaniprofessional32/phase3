@@ -1,0 +1,5 @@
+package com.sportshoes.website1.Entity;
+
+public class Student {
+
+}

@@ -1,0 +1,69 @@
+package com.sportshoes.website1.Entity;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+import lombok.Data;
+
+@Entity
+@Data
+public class Subject {
+ private Classess sectionName;
+ @Id
+ @GeneratedValue(strategy=GenerationType.AUTO)
+ private int cid;
+ 
+ private String subjectName20;
+ private String subjectName21;
+ private String subjectName22;
+public Subject() {
+	super();
+	// TODO Auto-generated constructor stub
+}
+public Subject(Classess sectionName, int cid, String subjectName20, String subjectName21, String subjectName22) {
+	super();
+	this.sectionName = sectionName;
+	this.cid = cid;
+	this.subjectName20 = subjectName20;
+	this.subjectName21 = subjectName21;
+	this.subjectName22 = subjectName22;
+}
+public Classess getSectionName() {
+	return sectionName;
+}
+public void setSectionName(Classess sectionName) {
+	this.sectionName = sectionName;
+}
+public int getCid() {
+	return cid;
+}
+public void setCid(int cid) {
+	this.cid = cid;
+}
+public String getSubjectName20() {
+	return subjectName20;
+}
+public void setSubjectName20(String subjectName20) {
+	this.subjectName20 = subjectName20;
+}
+public String getSubjectName21() {
+	return subjectName21;
+}
+public void setSubjectName21(String subjectName21) {
+	this.subjectName21 = subjectName21;
+}
+public String getSubjectName22() {
+	return subjectName22;
+}
+public void setSubjectName22(String subjectName22) {
+	this.subjectName22 = subjectName22;
+}
+@Override
+public String toString() {
+	return "Subject [sectionName=" + sectionName + ", cid=" + cid + ", subjectName20=" + subjectName20
+			+ ", subjectName21=" + subjectName21 + ", subjectName22=" + subjectName22 + "]";
+}
+ 
+}

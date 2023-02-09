@@ -1,0 +1,21 @@
+spring.h2.console.enabled=true
+spring.datasource.url=jdbc:h2:file:./db
+spring.datasource.driverClassName=org.h2.Driver
+spring.datasource.username=sa
+spring.datasource.password=
+spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+spring.jpa.hibernate.ddl-auto=update
+server.port=8081
+
+# ThymeLeaf settings
+spring.thymeleaf.cache=false
+spring.thymeleaf.check-template=true 
+spring.thymeleaf.check-template-location=true 
+spring.thymeleaf.enabled=true
+spring.thymeleaf.prefix=classpath:/templates/
+spring.thymeleaf.suffix=.html 
+
+#spring auth
+spring.security.oauth2.client.registration.goole.client-id=958664458538-qt1admohbqidcjkgm3gealqa1aepm5sc.apps.googleusercontent.com
+spring.security.oauth2.client.registration.goole.client-secret=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
+

@@ -1,0 +1,5 @@
+package com.sportshoes.website.Repositary;
+
+public interface OrderRepository {
+
+}

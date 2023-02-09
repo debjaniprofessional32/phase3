@@ -1,0 +1,102 @@
+package com.sportshoes.website.Entity;
+
+import java.util.Date;
+
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.TemporalType;
+import javax.persistence.Temporal;
+
+@Entity
+public class Order {
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private int oId;
+	private String oProductName;
+	private double oPrice;
+	private double oTotalPrice;
+	private String oUserFirstName;
+	private String email;
+   @Temporal(TemporalType.DATE)*/
+    private Date date;
+    @ManyToOne(fetch=FetchType.LAZY)
+    @JoinColumn(name="category_id", referencedColumnName="category_id")
+    private Category category;
+	public Order() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public Order(int oId, String oProductName, double oPrice, double oTotalPrice, String oUserFirstName, String email,
+			Date date, Category category) {
+		super();
+		this.oId = oId;
+		this.oProductName = oProductName;
+		this.oPrice = oPrice;
+		this.oTotalPrice = oTotalPrice;
+		this.oUserFirstName = oUserFirstName;
+		this.email = email;
+		this.date = date;
+		this.category = category;
+	}
+	public int getoId() {
+		return oId;
+	}
+	public void setoId(int oId) {
+		this.oId = oId;
+	}
+	public String getoProductName() {
+		return oProductName;
+	}
+	public void setoProductName(String oProductName) {
+		this.oProductName = oProductName;
+	}
+	public double getoPrice() {
+		return oPrice;
+	}
+	public void setoPrice(double oPrice) {
+		this.oPrice = oPrice;
+	}
+	public double getoTotalPrice() {
+		return oTotalPrice;
+	}
+	public void setoTotalPrice(double oTotalPrice) {
+		this.oTotalPrice = oTotalPrice;
+	}
+	public String getoUserFirstName() {
+		return oUserFirstName;
+	}
+	public void setoUserFirstName(String oUserFirstName) {
+		this.oUserFirstName = oUserFirstName;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public Date getDate() {
+		return date;
+	}
+	public void setDate(Date date) {
+		this.date = date;
+	}
+	public Category getCategory() {
+		return category;
+	}
+	public void setCategory(Category category) {
+		this.category = category;
+	}
+	@Override
+	public String toString() {
+		return "Order [oId=" + oId + ", oProductName=" + oProductName + ", oPrice=" + oPrice + ", oTotalPrice="
+				+ oTotalPrice + ", oUserFirstName=" + oUserFirstName + ", email=" + email + ", date=" + date
+				+ ", category=" + category + "]";
+	}
+    
+    
+}

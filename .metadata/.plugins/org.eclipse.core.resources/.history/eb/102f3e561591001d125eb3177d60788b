@@ -1,0 +1,5 @@
+package com.sportshoes.website1.Configuration;
+
+public class SecurityConfig {
+
+}

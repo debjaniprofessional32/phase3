@@ -1,0 +1,13 @@
+package com.sportshoes.website.Repositary;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.sportshoes.website.global.GlobalData;
+
+public interface CategoryRepositary extends JpaRepository<GlobalData,Integer>{
+
+
+
+	
+
+}

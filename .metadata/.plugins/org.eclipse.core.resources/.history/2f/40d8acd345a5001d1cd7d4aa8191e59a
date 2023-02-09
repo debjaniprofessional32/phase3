@@ -1,0 +1,150 @@
+package com.sportshoes.website.dto;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+import com.sportshoes.website.Entity.Category;
+import com.sportshoes.website.Entity.Product;
+
+import lombok.Data;
+
+@Data
+public class Cartdto {
+
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private int oId;
+	private String oProductName;
+	private double oPrice;
+	private double oTotalPrice;
+	private String oUserFirstName;
+	private String oUserLirstName;
+	private Long oPhone;
+	private String email;
+	private String address;
+	private String zip;
+	private String city;
+   @Temporal(TemporalType.DATE)
+    private Date date;
+    @ManyToOne(fetch=FetchType.LAZY)
+    @JoinColumn(name="category_id", referencedColumnName="category_id")
+    private Category category;
+	public Cartdto() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public Cartdto(int oId, String oProductName, double oPrice, double oTotalPrice, String oUserFirstName,
+			String oUserLirstName, Long oPhone, String email, String address, String zip, String city, Date date,
+			Category category) {
+		super();
+		this.oId = oId;
+		this.oProductName = oProductName;
+		this.oPrice = oPrice;
+		this.oTotalPrice = oTotalPrice;
+		this.oUserFirstName = oUserFirstName;
+		this.oUserLirstName = oUserLirstName;
+		this.oPhone = oPhone;
+		this.email = email;
+		this.address = address;
+		this.zip = zip;
+		this.city = city;
+		this.date = date;
+		this.category = category;
+	}
+	@Override
+	public String toString() {
+		return "Cartdto [oId=" + oId + ", oProductName=" + oProductName + ", oPrice=" + oPrice + ", oTotalPrice="
+				+ oTotalPrice + ", oUserFirstName=" + oUserFirstName + ", oUserLirstName=" + oUserLirstName
+				+ ", oPhone=" + oPhone + ", email=" + email + ", address=" + address + ", zip=" + zip + ", city=" + city
+				+ ", date=" + date + ", category=" + category + "]";
+	}
+	public int getoId() {
+		return oId;
+	}
+	public void setoId(int oId) {
+		this.oId = oId;
+	}
+	public String getoProductName() {
+		return oProductName;
+	}
+	public void setoProductName(String oProductName) {
+		this.oProductName = oProductName;
+	}
+	public double getoPrice() {
+		return oPrice;
+	}
+	public void setoPrice(double oPrice) {
+		this.oPrice = oPrice;
+	}
+	public double getoTotalPrice() {
+		return oTotalPrice;
+	}
+	public void setoTotalPrice(double oTotalPrice) {
+		this.oTotalPrice = oTotalPrice;
+	}
+	public String getoUserFirstName() {
+		return oUserFirstName;
+	}
+	public void setoUserFirstName(String oUserFirstName) {
+		this.oUserFirstName = oUserFirstName;
+	}
+	public String getoUserLirstName() {
+		return oUserLirstName;
+	}
+	public void setoUserLirstName(String oUserLirstName) {
+		this.oUserLirstName = oUserLirstName;
+	}
+	public Long getoPhone() {
+		return oPhone;
+	}
+	public void setoPhone(Long oPhone) {
+		this.oPhone = oPhone;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	public String getZip() {
+		return zip;
+	}
+	public void setZip(String zip) {
+		this.zip = zip;
+	}
+	public String getCity() {
+		return city;
+	}
+	public void setCity(String city) {
+		this.city = city;
+	}
+	public Date getDate() {
+		return date;
+	}
+	public void setDate(Date date) {
+		this.date = date;
+	}
+	public Category getCategory() {
+		return category;
+	}
+	public void setCategory(Category category) {
+		this.category = category;
+	}
+    
+    
+}
